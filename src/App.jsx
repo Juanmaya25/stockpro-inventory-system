@@ -18,12 +18,12 @@ const INIT_PRODUCTS = [
 ];
 
 const INIT_SALES = [
-  { id:1, date:'2025-04-30', product:'Laptop Dell XPS 13',   sku:'EL-0041', qty:2,  total:2598, client:'Empresa ABC',   method:'Transferencia' },
-  { id:2, date:'2025-04-30', product:'Mouse Logitech MX3',   sku:'EL-0088', qty:3,  total:267,  client:'Juan Pérez',    method:'Efectivo' },
-  { id:3, date:'2025-04-29', product:'Monitor LG 27"',       sku:'EL-0112', qty:1,  total:349,  client:'Maria López',   method:'Tarjeta' },
-  { id:4, date:'2025-04-29', product:'Cable HDMI 2m',        sku:'AC-0201', qty:10, total:120,  client:'TechCorp S.A.', method:'Transferencia' },
-  { id:5, date:'2025-04-28', product:'SSD Samsung 1TB',      sku:'ST-0055', qty:3,  total:360,  client:'Carlos Ruiz',   method:'Tarjeta' },
-  { id:6, date:'2025-04-28', product:'Auriculares Sony XM5', sku:'AU-0019', qty:2,  total:558,  client:'Digital Store', method:'Transferencia' },
+  { id:1, date:'2026-04-30', product:'Laptop Dell XPS 13',   sku:'EL-0041', qty:2,  total:2598, client:'Empresa ABC',   method:'Transferencia' },
+  { id:2, date:'2026-04-30', product:'Mouse Logitech MX3',   sku:'EL-0088', qty:3,  total:267,  client:'Juan Pérez',    method:'Efectivo' },
+  { id:3, date:'2026-04-29', product:'Monitor LG 27"',       sku:'EL-0112', qty:1,  total:349,  client:'Maria López',   method:'Tarjeta' },
+  { id:4, date:'2026-04-29', product:'Cable HDMI 2m',        sku:'AC-0201', qty:10, total:120,  client:'TechCorp S.A.', method:'Transferencia' },
+  { id:5, date:'2026-04-28', product:'SSD Samsung 1TB',      sku:'ST-0055', qty:3,  total:360,  client:'Carlos Ruiz',   method:'Tarjeta' },
+  { id:6, date:'2026-04-28', product:'Auriculares Sony XM5', sku:'AU-0019', qty:2,  total:558,  client:'Digital Store', method:'Transferencia' },
 ];
 
 const INIT_SUPPLIERS = [
@@ -102,17 +102,17 @@ const INIT_CAT_DATA = [
 // ─── SVG ICONS — todo SVG inline, NADA de emojis ────────────────────
 const Icon = {
   // Acciones
-  pencil: (s=14) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>,
-  trash: (s=14) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>,
-  check: (s=14) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
-  download: (s=14) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>,
-  plus: (s=16) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>,
-  search: (s=14) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
-  bell: (s=18) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>,
-  alert: (s=18) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>,
-  close: (s=18) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
-  sun: (s=18) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>,
-  moon: (s=18) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>,
+  pencil: ({size=14}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>,
+  trash: ({size=14}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>,
+  check: ({size=14}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+  download: ({size=14}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>,
+  plus: ({size=16}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>,
+  search: ({size=14}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
+  bell: ({size=18}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>,
+  alert: ({size=18}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>,
+  close: ({size=18}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
+  sun: ({size=18}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>,
+  moon: ({size=18}={}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>,
 
   // Nav
   grid: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>,
@@ -314,7 +314,7 @@ export default function App() {
 
   // Computed
   const totalValue   = useMemo(() => products.reduce((s, p) => s + p.stock * p.cost, 0), [products]);
-  const monthlySales = useMemo(() => sales.filter(s => s.date.startsWith('2025-04')).reduce((a, s) => a + s.total, 0), [sales]);
+  const monthlySales = useMemo(() => sales.filter(s => s.date.startsWith('2026-04')).reduce((a, s) => a + s.total, 0), [sales]);
   const lowCount     = useMemo(() => products.filter(p => p.stock > 0 && p.stock <= p.minStock).length, [products]);
   const outCount     = useMemo(() => products.filter(p => p.stock === 0).length, [products]);
   const categories   = useMemo(() => [...new Set(products.map(p => p.category))], [products]);
@@ -411,7 +411,7 @@ export default function App() {
         {[
           { l:'Productos',         v:products.length,                          sub:`${lowCount} con stock bajo`, c:C.accent,  trend:12 },
           { l:'Valor inventario',  v:`$${totalValue.toLocaleString()}`,        sub:'Costo total',                c:C.accent2, trend:8  },
-          { l:'Ventas del mes',    v:`$${monthlySales.toLocaleString()}`,      sub:`${sales.filter(s => s.date.startsWith('2025-04')).length} transacciones`, c:C.accent3, trend:15 },
+          { l:'Ventas del mes',    v:`$${monthlySales.toLocaleString()}`,      sub:`${sales.filter(s => s.date.startsWith('2026-04')).length} transacciones`, c:C.accent3, trend:15 },
           { l:'Stock crítico',     v:outCount + lowCount,                      sub:`${outCount} agotados`,       c:C.red,     trend:-5 },
         ].map(k => (
           <div key={k.l} style={{...S.card, borderTop:`2px solid ${k.c}`, position:'relative'}}>
@@ -638,7 +638,7 @@ export default function App() {
       <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:12, marginBottom:18}}>
         {[
           { l:'Total acumulado', v:`$${sales.reduce((a, s) => a + s.total, 0).toLocaleString()}`, sub:'Todas las ventas',   c:C.accent  },
-          { l:'Este mes',        v:`$${monthlySales.toLocaleString()}`,                            sub:'Abril 2025',         c:C.accent2 },
+          { l:'Este mes',        v:`$${monthlySales.toLocaleString()}`,                            sub:'Abril 2026',         c:C.accent2 },
           { l:'Ticket promedio', v:`$${Math.round(sales.reduce((a, s) => a + s.total, 0) / Math.max(sales.length, 1)).toLocaleString()}`, sub:'Por transacción', c:C.accent3 },
         ].map(k => (
           <div key={k.l} style={{...S.card, padding:'16px 18px', borderTop:`2px solid ${k.c}`}}>
@@ -989,7 +989,7 @@ export default function App() {
           <div style={{background:C.bg2, border:`1px solid ${C.border}`, borderRadius:14, padding:0, maxWidth:400, width:'100%', boxShadow:C.shadowLg, overflow:'hidden'}} onClick={e => e.stopPropagation()}>
             <div style={{padding:24, textAlign:'center'}}>
               <div style={{width:52, height:52, borderRadius:'50%', background:`${C.red}20`, color:C.red, display:'flex', alignItems:'center', justifyContent:'center', margin:'0 auto 14px'}}>
-                {Icon.alert(24)}
+                {Icon.alert({size:24})}
               </div>
               <div style={{fontSize:16, fontWeight:700, marginBottom:6, color:C.text}}>{confirm.msg}</div>
               <div style={{fontSize:13, color:C.text2}}>Esta acción no se puede deshacer.</div>
@@ -1024,7 +1024,7 @@ export default function App() {
         <div style={{display:'flex', alignItems:'center', gap:10, position:'relative'}}>
           {(outCount > 0 || lowCount > 0) && (
             <span style={{fontSize:12, background:`${C.red}15`, color:C.red, padding:'5px 12px', borderRadius:100, fontWeight:600, display:'inline-flex', alignItems:'center', gap:6, border:`1px solid ${C.red}30`}}>
-              {Icon.alert(13)} {outCount + lowCount} alertas
+              {Icon.alert({size:13})} {outCount + lowCount} alertas
             </span>
           )}
           <button onClick={() => setShowNotifs(s => !s)} aria-label="Notificaciones" style={{background:'transparent', border:'none', color:C.text, cursor:'pointer', position:'relative', padding:8, borderRadius:8, display:'flex'}}>
