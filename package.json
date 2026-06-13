@@ -4,7 +4,7 @@
   "version": "3.0.0",
   "type": "module",
   "description": "Sistema de inventario completo — productos, ventas, proveedores, clientes y reportes con stock en tiempo real.",
-  "author": "Juan José Maya (devMaya) <juanjosemorales2510@gmail.com>",
+  "author": "Juan José Maya (devMaya) <juanjosemaya2510@gmail.com>",
   "license": "MIT",
   "homepage": "https://juanmaya25.github.io/stockpro-inventory-system",
   "repository": {
@@ -14,7 +14,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -22,7 +25,11 @@
     "recharts": "^2.12.7"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.8"
+    "jsdom": "^29.1.1",
+    "vite": "^5.4.8",
+    "vitest": "^4.1.8"
   }
 }
